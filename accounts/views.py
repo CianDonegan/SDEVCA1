@@ -1,5 +1,5 @@
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, UpdateView, DetailView
+from django.views.generic import CreateView, UpdateView, DetailView, TemplateView
 from .forms import CustomUserCreationForm
 from .models import Profile
 
@@ -26,3 +26,7 @@ class ProfilePageView(DetailView):
 
     def get_object(self):
         return self.request.user
+
+
+class HomePageView(TemplateView):
+    template_name = 'home.html'
