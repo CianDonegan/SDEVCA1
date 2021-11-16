@@ -2,20 +2,26 @@
 {% load static %}
 {% block title %}Home{% endblock title %}
 {% block content %}
+<style>
+    .row a { color:white !important; text-decoration: none;  }
+    .row a:hover { color: white !important; }
+    .row a:visited { color: white !important;}
+    
+</style>
 <br />
 <div class="container-fluid text-sm-center p-5 bg-info text-white">
     <div class="row">
         <div class="col-sm-6">
             <h1 class="display-2">This is the main page of the site!</h1>
             <img class ="homecover" src="{% static 'images/homeC.jpg' %}">
-            <p class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">Graphics cards?/Hardware</a></p>
+            <p class="btn btn-primary btn-lg" ><a href="{% url 'article_list' %}" role="button">Graphics cards?/Hardware</a> </p>
             </p>
         </div>
 
         <div class="col-sm-6">
             <h1 class="display-2">This is the second side pannel of the main page this will hold link to secton 2</h1>
             <img class ="homecover2" src="{% static 'image/homeG.jpg' %}">
-            <p class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">This can be software e.g why are there shortages and how is it affecting everyone</p>
+            <p class="btn btn-primary btn-lg" ><a href="{% url 'news_list' %}" role="button">News</a></p>
         </div>
     </div>
     <br>

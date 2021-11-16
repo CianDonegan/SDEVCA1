@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'accounts',
     'pages',
     'articles',
+    'news',
 
     #3rd party
     'crispy_forms',
