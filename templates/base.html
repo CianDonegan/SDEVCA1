@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -6,6 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap">
+    <link  rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
 EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -18,9 +21,9 @@ EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="a
             {% if user.is_authenticated%}
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only"> Page</span></a>
-                    <a href="{% url 'logout' %}" class="nav-link">Logout</a>  
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only"> Page</span></a>  
                 </li>
+                <a href="{% url 'logout' %}" class="nav-link">Logout</a>
                 
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{user.username}}</a>
@@ -29,13 +32,14 @@ EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="a
                         <a href="{% url 'edit_profile' user.profile.pk %}" class="dropdown-item">Edit Profile</a>
                         <div class="dropdown-divider"></div>
                         <a href="{% url 'password_change'%}" class="dropdown-item">Change Password</a>      
-                                    
+                           
+                        <button></button>
                     </div>
                 </li>
             </ul>
             {% else %}
             <form class="form-inline ml-auto">
-                <a href="{% url 'login' %}" class="btn btn-outline secondary">
+                <a href="{% url 'login' %}" class="btn btn-outline bg-success">
                 Log In</a>
                 <a href="{% url 'signup' %}" class="btn btn-primary ml-2">
                 Sign up</a>
