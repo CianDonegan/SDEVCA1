@@ -33,4 +33,5 @@ class newsComment(models.Model):
         return self.comment
 
     def get_absolute_url(self):
-        return reverse('news_list')
+        return reverse('article_list')
+        
