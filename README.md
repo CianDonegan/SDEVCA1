@@ -5,7 +5,7 @@
  Features:
  
   Cian
-Article - create,edit,delete, 
+Article - create,edit,delete, comments
 login - sign up, sign out, login, log out, reset pass,change pass  
 accounts - CustomUser model, Profile
 media - GC
