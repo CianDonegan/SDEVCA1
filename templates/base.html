@@ -29,8 +29,12 @@ EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="a
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{user.username}}</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% if user.profile.pk %}
                         <a href="{% url 'show_profile' user.profile.pk %}" class="dropdown-item">View Profile</a>
                         <a href="{% url 'edit_profile' user.profile.pk %}" class="dropdown-item">Edit Profile</a>
+                        {%else%}
+                        <a href="{% url 'create_profile' %}" class="dropdown-item">Create Profile page</a>
+                        {% endif %}
                         <div class="dropdown-divider"></div>
                         <a href="{% url 'password_change'%}" class="dropdown-item">Change Password</a>      
                            
