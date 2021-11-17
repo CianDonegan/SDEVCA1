@@ -27,4 +27,4 @@ urlpatterns = [
     path('articles/', include('articles.urls')),
     path('news/',include('news.urls')),
     path('',HomePageView.as_view(),name='home')
-] +static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+] +static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

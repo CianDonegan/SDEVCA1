@@ -2,27 +2,34 @@
 {% load static %}
 {% block title %}Home{% endblock title %}
 {% block content %}
-<style>
-    .row a { color:white !important; text-decoration: none;  }
-    .row a:hover { color: white !important; }
-    .row a:visited { color: white !important;}
-    
-</style>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>cian</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
 <br />
-<div class="container-fluid text-sm-center p-5 bg-info text-white">
-    <div class="row">
-        <div class="col-sm-6">
-            <h1 class="display-2">This is the main page of the site!</h1>
-            <img class ="homecover" src="{% static 'images/homeC.jpg' %}">
-            <p class="btn btn-primary btn-lg" ><a href="{% url 'article_list' %}" role="button">Graphics cards?/Hardware</a> </p>
-            </p>
+<div class="container-fluid text-sm-center  text-white">
+    <div class="row mt-5">
+        <div class="col-sm-6 ">
+            <div class="card-body pb-5 rounded-pill text-center w-100 bg-danger font-weight-bold">
+                <h1 class="display-2 pb-4">Graphics Cards</h1>
+                <img class = "homecover2" src="{% static 'images/HomeC.jpg' %}">
+                <p class="btn bg-secondary btn-lg " ><a href="{% url 'article_list' %}" role="button">News</a></p>
+            </div>
         </div>
 
-        <div class="col-sm-6">
-            <h1 class="display-2">This is the second side pannel of the main page this will hold link to secton 2</h1>
-            <img class ="homecover2" src="{% static 'image/homeG.jpg' %}">
-            <p class="btn btn-primary btn-lg" ><a href="{% url 'news_list' %}" role="button">News</a></p>
+        <div class="col-sm-6 ">
+            <div class="card-body pb-5 rounded-pill text-center w-100 bg-info font-weight-bold">
+                <h1 class="display-2 pb-4">News</h1>
+                <img class ="homecover1" src="{% static 'images/HomeG.jpg' %}">
+                <p class="btn btn-success text-white btn-lg" ><a href="{% url 'news_list' %}" role="button">News</a></p>
+            </div>
         </div>
     </div>
+</div>
     <br>
+</html>
     {% endblock content %}
