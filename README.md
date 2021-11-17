@@ -15,3 +15,4 @@ css
 news - newsarticle, news comment
 accounts - create-profile fixing 1 to 1 error
 Deploying website on AWS Electric Beanstalk
+fixing minor errors in other files
