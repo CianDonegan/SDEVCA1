@@ -13,4 +13,5 @@ css
 
   Kacper
 news - newsarticle, news comment
--Launching the website
+accounts - create-profile fixing 1 to 1 error
+Deploying website on AWS Electric Beanstalk
