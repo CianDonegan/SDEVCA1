@@ -14,41 +14,146 @@ EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="a
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand p-3" href="{% url 'home' %}">Welcome!</a>
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            {% if user.is_authenticated%}
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only"> Page</span></a>  
-                </li>
-                <a href="{% url 'logout' %}" class="nav-link">Logout</a>
-                <a class="navbar-link" href="{% url 'article_new' %}">+ New Post</a> 
-                
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{user.username}}</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a href="{% url 'show_profile' user.profile.pk %}" class="dropdown-item">View Profile</a>
-                        <a href="{% url 'edit_profile' user.profile.pk %}" class="dropdown-item">Edit Profile</a>
-                        <div class="dropdown-divider"></div>
-                        <a href="{% url 'password_change'%}" class="dropdown-item">Change Password</a>      
-                           
-                        
-                    </div>
-                </li>
-            </ul>
-            {% else %}
-            <form class="form-inline ml-auto">
-                <a href="{% url 'login' %}" class="btn btn-outline bg-success">
-                Log In</a>
-                <a href="{% url 'signup' %}" class="btn btn-primary ml-2">
-                Sign up</a>
-                </form>
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <a class="navbar-brand p-3" href="{% url 'home' %}">Welcome!</a>
             
-            {% endif %}
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                {% if user.is_authenticated%}
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only"> Page</span></a>  
+                    </li>
+                    <a href="{% url 'logout' %}" class="nav-link">Logout</a>
+                    <a class="nav-link" href="{% url 'article_new' %}"><button>+ New Post</button></a> 
+                    
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{user.username}}</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a href="{% url 'show_profile' user.profile.pk %}" class="nav-link link-dark">View Profile</a>
+                            <a href="{% url 'edit_profile' user.profile.pk %}" class="nav-link link-dark">Edit Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="{% url 'password_change'%}" class="nav-link ">Change Password</a>      
+                               
+                            
+                        </div>
+                    </li>
+                </ul>
+                {% else %}
+                <form class="form-inline ml-auto">
+                    <a href="{% url 'login' %}" class="btn btn-outline bg-success">
+                    Log In</a>
+                    <a href="{% url 'signup' %}" class="btn btn-primary ml-2">
+                    Sign up</a>
+                    </form>
+                
+                {% endif %}
+            </div>
+        </nav>  
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+ }
+
+
+ a:link {
+    text-decoration: none;
+ }
+    a:hover {
+    background-color: rgb(226, 117, 14);
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  .nav-link {
+    list-style: none;
+}
+
+.nav-link li {
+    display: inline-block;
+    padding: 0px 20x;
+}
+
+
+.nav-links li a:hover {
+    transition: all 0.3s ease 0s;
+    color:0088a9;
+}
+
+
+button{
+    padding:9px 25px;
+    background-color: rgb(255, 127, 7);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0,136,169,0.8);
+}
+  
+  a {
+    font-family: "montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+
+}
+</style>
+
+<footer class="page-footer font-small teal pt-4">
+
+    <!-- Footer Text -->
+    <div class="container-fluid text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+  
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Graphics Cards</h5>
+          <p>The Graphics Card is responsible for rendering an image to your monitor, and it does this by converting data into a signal your monitor can understand. The better your graphics card the better and smoother an image can be produced. This is naturally very important for gamers and video editors</p>
+  
         </div>
-    </nav>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3">
+  
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">The tragic state of PC building in 2021</h5>
+          <p>The cause for today's PC component shortage is many sided. Perhaps the root cause for it all has been the coronavirus, which has undoubtedly impacted production of today's most in-demand components. Factories halted production early on in 2020 and are largely still playing catch-up today. Yet we mustn't ignore what has only served to exacerbate supply issues: bots and cryptocurrency mining continue to only make matters worse for your average PC builder.</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Text -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 font-weight-bold">© 2020 Copyright:
+      <a href="{% url 'home' %}"> HomePage</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
 
     <div class="container">
         {% block content %}

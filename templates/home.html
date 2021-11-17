@@ -16,16 +16,19 @@
         <div class="col-sm-6 ">
             <div class="card-body pb-5 rounded-pill text-center w-100 bg-danger font-weight-bold">
                 <h1 class="display-2 pb-4">Graphics Cards</h1>
-                <img class = "homecover2" src="{% static 'images/HomeC.jpg' %}">
-                <p class="btn bg-secondary btn-lg " ><a href="{% url 'article_list' %}" role="button">News</a></p>
+                <a href="{% url 'article_list' %}">
+                    <img src="{% static 'images/HomeC.jpg' %}" alt="Aricles" style="width:50px;height:50px;">
+                    </a>
             </div>
         </div>
 
         <div class="col-sm-6 ">
             <div class="card-body pb-5 rounded-pill text-center w-100 bg-info font-weight-bold">
                 <h1 class="display-2 pb-4">News</h1>
-                <img class ="homecover1" src="{% static 'images/HomeG.jpg' %}">
-                <p class="btn btn-success text-white btn-lg" ><a href="{% url 'news_list' %}" role="button">News</a></p>
+                <a href="{% url 'news_list' %}">
+                    <img src="{% static 'images/HomeG.jpg' %}" alt="HTML tutorial" style="width:50px;height:50px;">
+                    </a>
+                <a href="{% static 'images/HomeG.jpg' %}"></a>
             </div>
         </div>
     </div>
